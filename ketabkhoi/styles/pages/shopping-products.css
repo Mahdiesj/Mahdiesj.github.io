@@ -1,0 +1,107 @@
+.books-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+	place-items: start;
+	place-content: center;
+	gap: 1rem;
+	row-gap: 3rem;
+}
+.card-countainer {
+	direction: ltr;
+	margin: 0rem;
+	background-color: white;
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+	border-radius: 0.5rem;
+	display: flex;
+	flex-direction: column;
+	min-width: 13rem;
+	height: 100%;
+}
+.card-down {
+	direction: rtl;
+	padding: 0.3rem 0.3rem;
+	font-size: 0.8rem;
+	margin: 0;
+	border-top: 1px solid rgba(128, 128, 128, 0.3);
+	cursor: pointer;
+	min-height: 90px;
+}
+.card-down:hover {
+	background-color: hsl(0, 0%, 97%);
+}
+.card-down-pm {
+	padding: 0.2rem;
+	margin: 0;
+}
+.price {
+	direction: rtl;
+	text-align: left;
+	margin-left: 10px;
+}
+.card-top {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0.5rem;
+	min-height: 245px;
+	padding-right: 0;
+}
+.card-top > p {
+	padding: 0;
+	margin: 0;
+	height: 25px;
+	flex-basis: 100%;
+}
+.card-options {
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+}
+.card-options > * {
+	padding: 0.2rem 0;
+}
+.card-title {
+	color: black;
+	font-size: 0.9rem;
+}
+.card-pic {
+	margin-right: auto;
+	margin-left: 1rem;
+	margin-bottom: 1.2rem;
+}
+.card-writer {
+	color: gray;
+}
+.card-countainer svg {
+	height: 1.8rem;
+}
+.card-countainer svg:hover {
+	fill: hsl(0, 83%, 56%);
+}
+.card-countainer svg path {
+	stroke: hsl(0, 0%, 40%);
+}
+@media (width< 901px) {
+	.books-grid {
+		place-items: center;
+	}
+}
+@media (width< 470px) {
+	.card-countainer {
+		min-width: 9rem;
+	}
+	.books-grid {
+		grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+	}
+	.card-options {
+		flex-direction: row;
+		justify-content: center;
+		flex-basis: 100%;
+	}
+	.card-pic {
+		margin: 0 auto;
+	}
+	.card-top {
+		padding: 0.2rem;
+	}
+}

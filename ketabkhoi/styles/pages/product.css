@@ -1,0 +1,500 @@
+:root {
+	--notif-bg-color: #d7fee2;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
+.main-book-wrapper::after {
+	content: "";
+	width: 100%;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url(../../assets/pattern.png);
+	background-size: cover;
+	background-position: center;
+	opacity: 2.5%;
+	z-index: -1;
+	background-repeat: repeat-y;
+}
+main {
+	width: 100%;
+	margin: 0 auto;
+	height: 100%;
+	flex-grow: 1;
+}
+
+/* off */
+.off-notification {
+	direction: rtl;
+	text-align: center;
+	width: 100%;
+	background-color: var(--notif-bg-color);
+	padding: 0.5rem 0;
+	font-family: var(--main-font-reg);
+	color: black;
+	font-size: 1.4rem;
+	margin-bottom: 1.5rem;
+}
+/* main product */
+.main-book-wrapper {
+	padding: 2rem;
+	position: relative;
+}
+.wrapper-pic-and-detail {
+	display: flex;
+}
+.main-book-countainer {
+	direction: rtl;
+	display: flex;
+	max-width: 1400px;
+	padding: 1.5rem 2rem;
+	width: 100%;
+	margin: 0 auto;
+	background-color: #ffffff;
+	border-radius: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	color: #666666;
+}
+.main-img {
+	display: flex;
+	align-items: center;
+}
+.main-img img {
+	width: 16rem;
+	border-radius: 0.5rem;
+}
+/* qr code */
+section.none {
+	display: none;
+}
+.qr-code {
+	max-width: 17%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-right: auto;
+}
+.qr-code-p {
+	margin-top: 0.5rem;
+}
+/* buy details */
+.main-book-details {
+	margin-right: 1rem;
+	display: grid;
+	align-items: start;
+	gap: 0.5rem;
+}
+.main-book-title {
+	font-weight: 400;
+	color: black;
+}
+.writer-name-countainer {
+	display: flex;
+	gap: 1rem;
+}
+.book-types {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+}
+.book-mode-but {
+	border: none;
+	border-radius: 0.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 11rem;
+	height: 3rem;
+	gap: 0.8rem;
+	color: var(--text--lines-c);
+	opacity: 0.9;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s;
+	font-size: 0.9rem;
+}
+.book-mode-but svg {
+	width: 15%;
+}
+.book-mode-but svg path {
+	fill: var(--text--lines-c);
+	opacity: 0.8;
+}
+.book-mode-but:hover,
+.book-mode-but:focus-visible {
+	background-color: var(--custom-c1);
+	color: black;
+}
+.book-mode-but:hover svg path,
+.book-mode-but:focus-visible svg path {
+	fill: var(--danger-c);
+}
+/* details table */
+.main-book-detail-table {
+	th {
+		font-weight: 400;
+		width: 6.5rem;
+		text-align: right;
+	}
+	tr {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		margin-bottom: 1rem;
+	}
+	opacity: 1;
+}
+.table-td {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 5px;
+}
+.comments-link {
+	font-family: var(--main-font-reg);
+	color: var(--primary-c);
+	margin-right: 5px;
+}
+.comments-link:hover,
+.comments-link:focus-visible {
+	text-decoration: underline;
+}
+.scores-img {
+	width: 40%;
+}
+/* buy buttons */
+.buy-book-countainer {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 0.1rem;
+}
+.buy-but,
+.send-comment-but {
+	border: none;
+	color: white;
+	background: var(--primary-gradient);
+	border-radius: 5rem;
+	padding: 0.5rem 6rem;
+	cursor: pointer;
+	transition: opacity, 0.3s;
+}
+.buy-but:hover,
+.buy-but:focus-visible,
+.send-comment-but:hover,
+.send-comment-but:focus-visible {
+	opacity: 0.8;
+}
+.buy-but:active,
+.send-comment-but:active {
+	opacity: 0.5;
+}
+.toman {
+	font-family: var(--main-font-reg);
+	font-size: 0.8rem;
+}
+.main-save-but,
+.main-share-but {
+	background: none;
+	border: none;
+	display: flex;
+	place-items: center;
+	cursor: pointer;
+	padding: 0.6rem;
+}
+.main-save-but:hover,
+.main-share-but:hover,
+.main-save-but:focus-visible,
+.main-share-but:focus-visible {
+	background-color: var(--custom-c1);
+	border-radius: 40%;
+}
+.share-save-wraper {
+	display: flex;
+	gap: 0.5rem;
+	margin-left: auto;
+	align-items: center;
+}
+.main-share-icon {
+	height: 25px;
+	width: 25px;
+}
+/* book summery */
+.main-book-summery {
+	direction: rtl;
+	background-color: white;
+	padding: 1rem 2rem;
+	margin-top: 2rem;
+	border-radius: 1rem;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	line-height: 1.9;
+	max-width: 1400px;
+	margin-inline: auto;
+}
+/* book comments */
+.main-book-comments {
+	direction: rtl;
+	display: grid;
+	column-gap: 1rem;
+	grid-template-columns: auto 1.5fr;
+	margin: 0 auto;
+	max-width: 1400px;
+	margin-top: 3rem;
+	align-items: start;
+}
+.comments-top-countainer {
+	grid-column: 2/3;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-bottom: 1rem;
+}
+.comments-top-countainer > h4 {
+	font-weight: normal;
+	color: black;
+	font-size: 1.5rem;
+}
+.make-comment {
+	width: clamp(16rem, 20vw, 50rem);
+}
+.make-comment,
+.comment-card {
+	background-color: white;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	border-radius: 0.5rem;
+}
+.comment-form {
+	padding: 1rem;
+	display: grid;
+	justify-items: start;
+	gap: 1rem;
+	h5 {
+		margin: 0;
+		color: black;
+		font-weight: normal;
+		font-size: 1rem;
+	}
+}
+.comment-text-area {
+	background-color: #f4f4fb;
+	border: none;
+	border-radius: 0.5rem;
+	width: 100%;
+	min-height: 10rem;
+	resize: none;
+	padding: 1rem;
+	font-size: 0.8rem;
+}
+.stars-countainer {
+	display: flex;
+	gap: 0.4rem;
+}
+.comment-score-but {
+	background: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	cursor: pointer;
+}
+.comment-score-but:hover svg path {
+	fill: gold;
+}
+.send-comment-but {
+	padding: 0.5rem 3rem;
+}
+.comment-card {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 5rem 1fr;
+	column-gap: 1rem;
+	max-width: 100%;
+	padding: 1rem;
+	margin-bottom: 1.5rem;
+}
+.profile-pic {
+	background-color: #bee7b7;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 1rem 1.8rem;
+	border-radius: 50%;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+.comment-col-a {
+	background-color: #e4e7b7;
+}
+.comment-col-b {
+	background-color: #e7b7b7;
+}
+.comment-col-c {
+	background-color: #b7d6e7;
+}
+.comment-col-d {
+	background-color: #d2b7e7;
+}
+
+.comment-card-text {
+	h4 {
+		font-weight: normal;
+		font-size: 1.2rem;
+		color: black;
+	}
+	.comment-user-score {
+		width: 5.5rem;
+	}
+}
+.comment-user-p {
+	grid-column: 2/3;
+}
+/* familiar books */
+.secendery-wrappers {
+	direction: rtl;
+	max-width: 1600px;
+	padding: 0rem 2rem;
+	margin: 0 auto;
+}
+.secendery-title {
+	font-size: 2rem;
+	padding: 1rem;
+}
+.secendery-books {
+	direction: rtl;
+	display: flex;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 1rem;
+	overflow: auto;
+	overflow-y: hidden;
+}
+article.card-countainer {
+	min-width: 12rem;
+}
+article.card-countainer svg path {
+	stroke: #666666;
+}
+/* responsive */
+@media (width<925px) {
+	.main-book-wrapper {
+		padding: 0.5rem;
+	}
+	section.none {
+		display: flex;
+	}
+	.none-small {
+		display: none;
+	}
+	.book-types {
+		margin-bottom: 1rem;
+	}
+	.book-mode-but {
+		width: 5rem;
+		height: 2rem;
+		padding: 0;
+		margin: 0 auto;
+		font-size: 0.7rem;
+	}
+	.book-mode-but svg {
+		display: none;
+	}
+}
+@media (width<665px) {
+	.off-notification {
+		font-size: 1rem;
+	}
+	.main-book-countainer {
+		padding: 1rem 0.2rem;
+	}
+	.main-book-title {
+		font-size: 1rem;
+	}
+	.writer-name-countainer {
+		font-size: 0.8rem;
+	}
+	.qr-code-p {
+		font-size: 0.7rem;
+	}
+	.main-book-detail-table {
+		th {
+			font-weight: 400;
+			width: 5rem;
+			text-align: right;
+			font-size: 0.8rem;
+		}
+		tr {
+			display: flex;
+			align-items: center;
+			margin-bottom: 0.3rem;
+			font-size: 0.8rem;
+		}
+		td {
+		}
+	}
+	.buy-but {
+		padding: 0.5rem 2rem;
+		font-size: 0.7rem;
+	}
+	.main-share-icon {
+		height: 20px;
+		width: 20px;
+	}
+	.main-book-comments {
+		grid-template-columns: 1fr;
+		row-gap: 1.5rem;
+		padding: 0.2rem;
+	}
+	.main-book-comments > * {
+		grid-column: 1/-1;
+	}
+	.make-comment {
+		width: 100%;
+	}
+	.comment-user-p {
+		grid-column: 1/-1;
+		margin-top: 0.5rem;
+	}
+	.secendery-wrappers {
+		padding: 1rem 0;
+	}
+}
+@media (width<530px) {
+	.main-book-summery {
+		max-height: 12rem;
+		overflow-y: scroll;
+		padding: 1.5rem;
+	}
+	.main-book-countainer {
+		flex-wrap: wrap;
+	}
+	section.none {
+		display: none;
+	}
+	section.qr-code {
+		max-width: 100%;
+		flex-direction: row;
+		margin-top: 1rem;
+	}
+	.qr-cod-img {
+		width: 25%;
+	}
+	section.none-small {
+		display: flex;
+	}
+	.book-mode-but {
+		margin: 0;
+	}
+	.main-img {
+		max-width: 100%;
+		min-width: 10%;
+		margin-bottom: auto;
+	}
+	.comment-user-p {
+		font-size: 0.8rem;
+		line-height: 1.8;
+	}
+}
